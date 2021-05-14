@@ -7,22 +7,17 @@
 
 {{ define "main" }}
     <section>
-        <div class="row"  style="margin: 2%;">
+        <div class="row">
             {{range .Site.Data.colleges}}
             <div class="card-col col-lg-6 col-md-6">
-                <div class="card" style="background-color:rgb(242, 242, 255);
-                 padding: 5%;
-                ">
-                <div class="card-header" style="background-color:rgb(242, 242, 255);
-                padding: 0 0 10px 0;
-                ">
-                    Rank - {{.rank}}<br>
-                </div>
-                <div class="card-body" style="padding: 2% 0 0 0;">
-                {{.collegeName}}<br>
-                
-                Score - {{.score}}<br>
-            </div>
+                <div class="card">
+                    <div class="card-header">
+                        Rank - {{.rank}}<br>
+                    </div>
+                    <div class="card-body">
+                        <p>{{.collegeName}}</p>
+                        <p>Score - {{.score}}</p>
+                    </div>
                 </div>
             </div>
             {{end}}
